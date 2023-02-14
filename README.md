@@ -1,5 +1,5 @@
 ## Challange Three 
-
+A website to generate passwords. The user can select criteria that will change what kind of password is generated. 
 
 # URL 
 https://shychi64.github.io/challange3/
