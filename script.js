@@ -11,11 +11,15 @@ function writePassword() {
 }
 
 function generatePassword() { 
-  const useUppercase = true 
-  const useLowercase = true 
-  const useNumerics = true 
-  const useSpecialcharacters = true 
+  const useUppercase = document.querySelector("#uppercaseCheckbox").checked
+  const useLowercase = document.querySelector("#lowercaseCheckbox").checked
+  const useNumerics = document.querySelector("#numbersCheckbox").checked
+  const useSpecialcharacters = document.querySelector("#specialCheckbox").checked
   const length = 9 
+  if (!useUppercase && !useLowercase && !useNumerics && !useSpecialcharacters) {
+    return "Please select one set of characters."
+  }
+  console.log(useUppercase)
   var randomLetters = []
   var randomAll = ""
   var letter = "abcdefghijklmnopqrstuvwxyz" 
@@ -49,3 +53,4 @@ return ("This is your password " + randomLetters.join(""))
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
